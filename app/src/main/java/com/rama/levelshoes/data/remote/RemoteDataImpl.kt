@@ -10,6 +10,6 @@ class RemoteDataImpl @Inject constructor(
     private val productService: ProductService
 ) : RemoteData {
 
-    override suspend fun getProducts(): Response<data> =
+    override suspend fun getProducts(): data =
         productService.getAllProduct()
 }

@@ -4,19 +4,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <variable
             name="product"
             type="com.rama.levelshoes.data.model.Product" />
-
     </data>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_100sdp"
-        android:layout_marginHorizontal="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp">
 
@@ -27,9 +25,9 @@
             <ImageView
                 android:id="@+id/img_product"
                 setImage="@{product.image}"
-                android:padding="@dimen/_12sdp"
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_100sdp"
+                android:padding="12dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -39,9 +37,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginHorizontal="12dp"
                 android:gravity="center"
-                android:text="@{product.title}"
+                android:text="@{product.name}"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textAppearance="@style/Small"
@@ -59,8 +57,7 @@
                 android:layout_height="wrap_content"
                 android:isIndicator="true"
                 android:numStars="5"
-                android:progressTint="@color/yellow"
-                android:rating="@{Float.valueOf(String.valueOf(product.rate))}"
+                android:progressTint="@color/purple_200"
                 android:secondaryProgressTint="@color/blue"
                 android:stepSize="0.5"
                 app:layout_constraintBottom_toTopOf="@+id/tv_price"
@@ -87,9 +84,9 @@
 
             <ImageView
                 android:id="@+id/img_delete"
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:padding="@dimen/_8sdp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

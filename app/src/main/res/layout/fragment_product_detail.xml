@@ -19,23 +19,23 @@
 
         <ImageView
             android:id="@+id/img_favorite"
-            favoriteState="@{productModel.favorite}"
-            android:layout_width="@dimen/_36sdp"
-            android:layout_height="@dimen/_36sdp"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:layout_marginEnd="@dimen/_12sdp"
-            android:padding="@dimen/_6sdp"
+            favoriteState="@{productModel.favourite}"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:padding="6dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/blue" />
 
         <ImageView
             android:id="@+id/img_back"
-            android:layout_width="@dimen/_36sdp"
-            android:layout_height="@dimen/_36sdp"
-            android:layout_marginStart="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:padding="@dimen/_6sdp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:padding="6dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_back_arrow"
@@ -45,10 +45,10 @@
             android:id="@+id/tv_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_16sdp"
-            android:layout_marginTop="@dimen/_22sdp"
-            android:layout_marginEnd="@dimen/_16sdp"
-            android:text="@{productModel.title}"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="16dp"
+            android:text="@{productModel.name}"
             android:textAppearance="@style/Large"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
@@ -60,34 +60,24 @@
             android:id="@+id/scrollView2"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_16sdp"
-            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/btn_add_to_bag"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tv_title"
             app:layout_constraintTop_toBottomOf="@+id/img_background">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:lineHeight="@dimen/_22sdp"
-                android:text="@{productModel.description}"
-                android:textAppearance="@style/Medium"
-                tools:text="Title" />
-
         </ScrollView>
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView3"
-            priceValue="@{productModel.price}"
-            salePrice="@{productModel.salePrice}"
+            priceValue="@{productModel.originalPrice}"
+            originalPriceValue="@{productModel.price}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_16sdp"
-            android:layout_marginBottom="@dimen/_4sdp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="4dp"
             android:textAppearance="@style/Large"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textView6"
@@ -95,9 +85,19 @@
             app:layout_constraintTop_toTopOf="@+id/btn_add_to_bag"
             tools:text="110.99$" />
 
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="260dp"
+            android:alpha="0.1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/bg_rectangle" />
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView6"
-            saleTextPrice="@{productModel.salePrice}"
+            saleTextPrice="@{productModel.price}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/Large"
@@ -109,12 +109,12 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_add_to_bag"
-            android:layout_width="@dimen/_140sdp"
-            android:layout_height="@dimen/_44sdp"
-            android:layout_marginEnd="@dimen/_16sdp"
-            android:layout_marginBottom="@dimen/_16sdp"
+            android:layout_width="140dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:backgroundTint="@color/blue"
-            android:text="@string/add_to_bag"
+            android:text="@string/add_to_cart"
             android:textAllCaps="false"
             android:textSize="15dp"
             app:cornerRadius="6dp"
@@ -126,8 +126,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:paddingStart="@dimen/_64sdp"
-            android:paddingEnd="@dimen/_64sdp"
+            android:paddingStart="64dp"
+            android:paddingEnd="64dp"
             app:layout_constraintBottom_toTopOf="@+id/imageView2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -135,28 +135,12 @@
 
         <ImageView
             android:id="@+id/img_background"
-            android:layout_width="@dimen/_84sdp"
-            android:layout_height="@dimen/_24sdp"
-            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_width="84dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="6dp"
             app:layout_constraintStart_toStartOf="@id/tv_title"
             app:layout_constraintTop_toBottomOf="@id/tv_title"
             app:srcCompat="@drawable/bg_rectangle" />
-
-        <RatingBar
-            android:id="@+id/ratingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@android:style/Widget.Material.RatingBar.Small"
-            android:isIndicator="true"
-            android:numStars="5"
-            android:progressTint="@color/yellow"
-            android:rating="@{Float.valueOf(String.valueOf(productModel.rate))}"
-            android:secondaryProgressTint="@color/blue"
-            android:stepSize="0.5"
-            app:layout_constraintBottom_toBottomOf="@+id/img_background"
-            app:layout_constraintEnd_toEndOf="@+id/img_background"
-            app:layout_constraintStart_toStartOf="@+id/img_background"
-            app:layout_constraintTop_toTopOf="@+id/img_background" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/progress_bar"
@@ -164,7 +148,7 @@
             android:layout_height="0dp"
             android:background="@color/white"
             android:visibility="gone"
-            android:elevation="@dimen/_4sdp"
+            android:elevation="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

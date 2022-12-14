@@ -13,7 +13,7 @@ data class Product(
     @PrimaryKey(autoGenerate = true)
     @SerializedName("id")
     @ColumnInfo(name = "id")
-    val id :Int,
+    val id:Int,
 
     @SerializedName("name")
     @ColumnInfo(name = "name")
@@ -25,7 +25,7 @@ data class Product(
 
     @SerializedName("price")
     @ColumnInfo(name = "price")
-    val price: Double,
+    val price: Double?,
 
     @SerializedName("sku")
     @ColumnInfo(name = "sku")
@@ -37,7 +37,7 @@ data class Product(
 
     @SerializedName("originalPrice")
     @ColumnInfo(name = "originalPrice")
-    val originalPrice: String,
+    val originalPrice: Double?,
 
     @ColumnInfo(name = "isFav")
     val isFavourite: Boolean = false,

@@ -1,6 +1,5 @@
 package com.rama.levelshoes.domain.usecase
 
-import com.rama.levelshoes.data.model.Product
 import com.rama.levelshoes.domain.ProductRepository
 import javax.inject.Inject
 

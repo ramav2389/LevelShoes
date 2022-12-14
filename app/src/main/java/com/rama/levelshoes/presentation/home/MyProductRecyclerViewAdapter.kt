@@ -33,7 +33,7 @@ class MyProductRecyclerViewAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = list[position]
         holder.nameView.text = item.name
-        holder.priceView.text = item.originalPrice
+        holder.priceView.text = item.originalPrice.toString()
         holder.salePriceView.text = item.price.toString()
         Glide.with(holder.imageView).load(item.image).into(holder.imageView)
     }
