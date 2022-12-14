@@ -13,19 +13,30 @@
         <action
             android:id="@+id/action_productFragment_to_productDetailFragment"
             app:destination="@id/productDetailFragment" />
+
         <action
             android:id="@+id/action_productFragment_to_favoritesFragment"
             app:destination="@id/favoritesFragment" />
 
     </fragment>
+
     <fragment
         android:id="@+id/productDetailFragment"
         android:name="com.rama.levelshoes.presentation.detail.ProductDetailFragment"
-        android:label="fragment_product_detail"
-        tools:layout="@layout/fragment_product_detail" />
+        android:label="ProductDetailFragment"
+        tools:layout="@layout/fragment_product_detail" >
+        <argument
+            android:name="product"
+            app:argType="com.rama.levelshoes.data.model.Product" />
+    </fragment>
+
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.rama.levelshoes.presentation.fav.FavoritesFragment"
-        android:label="FavoritesFragment" />
+        android:label="FavoritesFragment" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
 
 </navigation>

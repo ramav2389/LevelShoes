@@ -1,10 +1,12 @@
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.rama.levelshoes.R
 import com.rama.levelshoes.data.model.Product
 import com.rama.levelshoes.databinding.ItemFavoriteBinding
+import com.rama.levelshoes.presentation.fav.FavoritesFragmentDirections
 import com.rama.levelshoes.util.margin
 
 
@@ -33,7 +35,11 @@ class FavoritesAdapter : RecyclerView.Adapter<FavoritesAdapter.ProductsViewHolde
                 product = item
 
                 imgProduct.setOnClickListener {
-
+                    val action =
+                        FavoritesFragmentDirections.actionFavoritesFragmentToProductDetailFragment(
+                            item
+                        )
+                    it.findNavController().navigate(action)
                 }
 
                 imgDelete.setOnClickListener { onDeleteClick(item.id) }

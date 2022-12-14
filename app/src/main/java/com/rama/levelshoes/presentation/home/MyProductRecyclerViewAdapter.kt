@@ -67,8 +67,9 @@ class MyProductRecyclerViewAdapter(
                 }
 
                 imgProduct.setOnClickListener {
+                   val action =  ProductFragmentDirections.actionProductFragmentToProductDetailFragment(item)
                     it.findNavController()
-                        .navigate(R.id.action_productFragment_to_productDetailFragment)
+                        .navigate(action)
 
                 }
             }
